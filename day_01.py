@@ -1,7 +1,7 @@
 with open('day') as f: txt = f.read()
 
 # Split the input into distinct elves.
-elves = txt.split('\n\n')[:-1]
+elves = txt.split('\n\n')
 
 # For each of the elves, split the food they are carrying and add them together.
 elves = [sum([int(food_calories) for food_calories in elf.splitlines()]) for elf in elves]
